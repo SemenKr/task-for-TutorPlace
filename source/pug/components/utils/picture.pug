@@ -1,4 +1,8 @@
 mixin picture(path, image, format, width, height, altText)
-  picture(class!=attributes.class)
-    source(type="image/webp", srcset="img/" + path + "/" + image + ".webp" + ", " + "img/" + path + "/" + image + "@2x.webp" + " 2x")
-    img(src="img/" + path + "/" + image + "." + format, srcset= "img/" + path + "/" + image + "@2x." + format + " 2x", width= width, height= height, alt= altText)
+  picture
+    source(srcset=`img/${path}/${image}.avif, img/${path}/${image}@2x.avif 2x`, type="image/avif", media="(min-width: 768px)")
+    source(srcset=`img/${path}/${image}-mobile.avif, img/${path}/${image}-mobile@2x.avif 2x`, type="image/avif")
+    source(srcset=`img/${path}/${image}.webp, img/${path}/${image}@2x.webp 2x`, type="image/webp", media="(min-width: 768px)")
+    source(srcset=`img/${path}/${image}-mobile.webp, img/${path}/${image}-mobile@2x.webp 2x`, type="image/webp")
+    source(srcset=`img/${path}/${image}.${format}, img/${path}/${image}@2x.${format} 2x`, type="image/${format}", media="(min-width: 768px)")
+    img.image-content(src=`img/${path}/${image}-mobile.${format}`, srcset=`img/${path}/${image}-mobile@2x.${format} 2x`, width="280", height="280", alt=altText)
