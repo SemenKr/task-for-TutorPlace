@@ -1,4 +1,6 @@
 mixin modal-success()
-  p.modal__description Размер этой модалки зависит от ширины контента,
-    br
-    | отключена анимация-скейл
+  h2.title.title--h2.modal__title Начни прямо сейчас!
+  p.text.modal__text Получи все нужные навыки для заработка на&nbsp;NFT всего за&nbsp;28&nbsp;дней!
+  form.form-modal(action="/submit", method="POST")
+    input.form-modal__input(type="email", name="email", placeholder="Ваш email", required)
+    +btn({text: "Оплатить", href: "#"}).form-modal__btn

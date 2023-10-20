@@ -23,7 +23,7 @@ mixin header(headerMods, currentUrl)
             a.header__link(href='components.html') Главная
           li.header__item
             a.header__link(href='cases.html') Что даст обучение
-        +btn({text: "Личный кабинет", href: "#"}).btn-header
+        +btn({text: "Личный кабинет"})(data-open-modal="success").btn-header
       button.header__burger(type='button', aria-label='Переключатель отображения меню', aria-pressed='false', data-burger='')
   //- header.header(class=headerMods)
   //-   .container

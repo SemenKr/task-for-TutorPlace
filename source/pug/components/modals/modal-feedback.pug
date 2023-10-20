@@ -1,2 +1,21 @@
 mixin modal-feedback()
-  p.modal__description Обычная модалка
+  h2.modal__title.title.title--h2 Что даст тебе обучение?
+  ul.modal__list
+    li.modal__item
+      +img("content", "smile1", "png", 117, 117, "smile")
+      p Откроешь свой первый криптокошелек и&nbsp;научишься с&nbsp;ним работать
+    li.modal__item
+      +img("content", "smile2", "png", 117, 117, "smile")
+      p Поймёшь, как выбирать правильные дропы
+    li.modal__item
+      +img("content", "smile3", "png", 117, 117, "smile")
+      p Построишь план по&nbsp;быстрому приумножению заработанных средств
+    li.modal__item
+      +img("content", "smile4", "png", 117, 117, "smile")
+      p Узнаешь кто такие холдеры и&nbsp;флипперы
+  .modal__decor-ellipse1
+   +img("content", "modal-decor1", "png", 84, 84, "decor")
+  .modal__decor-ellipse2
+    +img("content", "modal-decor2", "png", 151, 151, "decor")
+  .modal__decor-ellipse3
+      +img("content", "modal-decor3", "png", 131, 131, "decor")

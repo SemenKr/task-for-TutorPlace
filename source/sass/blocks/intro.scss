@@ -31,6 +31,7 @@
     max-width: 500px;
     margin-bottom: 67px;
 
+
     @include vp-1023 {
       width: 100%;
       text-align: center;
@@ -42,9 +43,14 @@
     flex-shrink: 0;
     position: absolute;
     top: 185px;
-    right: -13%;
+    right: 0;
     z-index: -1;
+    transform: translateX(11%);
     aspect-ratio: 16 / 9;
+
+    @include vp-1439 {
+      transform: translateX(0);
+    }
 
     @include vp-1023 {
       position: relative;

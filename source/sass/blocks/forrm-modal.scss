@@ -1,0 +1,27 @@
+.form-modal {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  &__input {
+    padding: 15px 16px;
+    align-items: center;
+    border-radius: 10px;
+    display: inline-flex;
+    margin-bottom: 18px;
+
+    @include vp-1023 {
+      margin-bottom: 17px;
+    }
+
+    &::placeholder {
+      font-family: $ff-inter;
+      @include adaptive-font(18, 16)
+    }
+  }
+
+  &__btn {
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
