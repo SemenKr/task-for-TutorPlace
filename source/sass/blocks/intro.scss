@@ -19,10 +19,22 @@
 
   &__title {
     width: 55%;
+    margin-bottom: 20px;
 
     @include vp-1023 {
       width: 100%;
       text-align: center;
+    }
+  }
+
+  &__text {
+    max-width: 500px;
+    margin-bottom: 67px;
+
+    @include vp-1023 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 40px;
     }
   }
 
