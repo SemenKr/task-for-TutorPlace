@@ -1,0 +1,11 @@
+.title {
+  color: $color-default-white;
+  font-family: $ff-inter;
+
+  &--h1 {
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -2.16px;
+  }
+}
