@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>ProjectName</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="ProjectName — описание">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" data-header="">
+        <div class="container header__wrapper"><a class="logo header__logo" href="index.html" aria-label="Переход на главную страницу"><img src="img/svg/icon-logo.svg" width="128" height="55" alt="Логотип"></a>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a class="header__link" href="components.html">Главная</a></li>
+              <li class="header__item"><a class="header__link" href="cases.html">Что даст обучение</a></li>
+            </ul>
+            <button class="btn btn-header" type="button" data-open-modal="success">Личный кабинет</button>
+          </nav>
+          <button class="header__burger" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger=""></button>
+        </div>
+      </header>
+      <main>
+        <div class="intro">
+          <div class="container intro__wrapper">
+            <h1 class="intro__title title title--h1">Не&nbsp;упусти <br>возможность войти в&nbsp;<b>прибыльную нишу</b></h1>
+            <div class="intro__image">
+              <picture>
+                <source srcset="img/content/man.avif, img/content/man@2x.avif 2x" type="image/avif" media="(min-width: 1023px)">
+                <source srcset="img/content/man-mobile.avif, img/content/man-mobile@2x.avif 2x" type="image/avif">
+                <source srcset="img/content/man.webp, img/content/man@2x.webp 2x" type="image/webp" media="(min-width: 1023px)">
+                <source srcset="img/content/man-mobile.webp, img/content/man-mobile@2x.webp 2x" type="image/webp">
+                <source srcset="img/content/man.png, img/content/man@2x.png 2x" type="image/${format}" media="(min-width: 1023px)"><img class="image-content" src="img/content/man-mobile.png" srcset="img/content/man-mobile@2x.png 2x" width="280" height="280" alt="Alt Text">
+              </picture>
+            </div>
+            <p class="intro__text text">Получи все нужные навыки для заработка на&nbsp;NFT всего за&nbsp;28&nbsp;дней!</p>
+            <button class="btn" type="button" data-open-modal="feedback">modal-feedback</button>
+          </div>
+          <div class="intro__decor-ellipse"></div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container"></div>
+      </footer>
+    </div>
+    <div class="modal modal--preload modal--feedback" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2 class="modal__title title title--h2">Что даст тебе обучение?</h2>
+          <ul class="modal__list">
+            <li class="modal__item"><img src="img/content/smile1.png" srcset="img/content/smile1@2x.png 2x" width="117" height="117" alt="smile">
+              <p>Откроешь свой первый криптокошелек и&nbsp;научишься с&nbsp;ним работать</p>
+            </li>
+            <li class="modal__item"><img src="img/content/smile2.png" srcset="img/content/smile2@2x.png 2x" width="117" height="117" alt="smile">
+              <p>Поймёшь, как выбирать правильные дропы</p>
+            </li>
+            <li class="modal__item"><img src="img/content/smile3.png" srcset="img/content/smile3@2x.png 2x" width="117" height="117" alt="smile">
+              <p>Построишь план по&nbsp;быстрому приумножению заработанных средств</p>
+            </li>
+            <li class="modal__item"><img src="img/content/smile4.png" srcset="img/content/smile4@2x.png 2x" width="117" height="117" alt="smile">
+              <p>Узнаешь кто такие холдеры и&nbsp;флипперы</p>
+            </li>
+          </ul>
+          <div class="modal__decor-ellipse1"><img src="img/content/modal-decor1.png" srcset="img/content/modal-decor1@2x.png 2x" width="84" height="84" alt="decor">
+          </div>
+          <div class="modal__decor-ellipse2"><img src="img/content/modal-decor2.png" srcset="img/content/modal-decor2@2x.png 2x" width="151" height="151" alt="decor">
+          </div>
+          <div class="modal__decor-ellipse3"><img src="img/content/modal-decor3.png" srcset="img/content/modal-decor3@2x.png 2x" width="131" height="131" alt="decor">
+          </div>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="40" height="40" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2 class="title title--h2 modal__title">Начни прямо сейчас!</h2>
+          <p class="text modal__text">Получи все нужные навыки для заработка на&nbsp;NFT всего за&nbsp;28&nbsp;дней!</p>
+          <form class="form-modal" action="/submit" method="POST">
+            <input class="form-modal__input" type="email" name="email" placeholder="Ваш email" required>
+            <a class="btn form-modal__btn" href="#">Оплатить</a>
+          </form>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="40" height="40" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
