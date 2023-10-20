@@ -1,11 +1,17 @@
 .title {
   color: $color-default-white;
   font-family: $ff-inter;
+  margin: 0;
+  padding: 0;
 
   &--h1 {
-    font-size: 72px;
+    @include adaptive-font(72, 25);
     font-weight: 400;
     line-height: 1.05;
     letter-spacing: -2.16px;
+
+    @include vp-767 {
+      letter-spacing: -0.75px;
+    }
   }
 }

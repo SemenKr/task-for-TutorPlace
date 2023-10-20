@@ -2,6 +2,10 @@ mixin intro()
   .intro
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
-    .container.intro.wrapper
-      h1.intro__title.title.title--h1 Не&nbsp;упусти возможность войти в&nbsp;прибыльную нишу
-      +picture('content', 'man', 'png', 800, 600, 'Alt Text')
+    .container.intro__wrapper
+      h1.intro__title.title.title--h1 Не&nbsp;упусти <br>возможность войти в&nbsp;<b>прибыльную нишу</b>
+      .intro__image
+        +picture('content', 'man', 'png', 800, 600, 'Alt Text')
+      p.intro__text.text Получи все нужные навыки для заработка на&nbsp;NFT всего за&nbsp;28&nbsp;дней!
+      +btn({text: "Начать зарабатывать на NFT"})(data-open-modal="feedback")
+    .intro__decor-ellipse
