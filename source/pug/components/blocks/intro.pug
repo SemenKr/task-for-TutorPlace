@@ -2,9 +2,6 @@ mixin intro()
   .intro
     //- вставлять блоки во внешний контейнер неверно
     //- все блоки содержат в себе container без доп класса tutorial__wrapper
-    .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
-
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+    .container.intro.wrapper
+      h1.intro__title.title.title--h1 Не&nbsp;упусти возможность войти в&nbsp;прибыльную нишу
+      +picture('content', 'man', 'png', 800, 600, 'Alt Text')
