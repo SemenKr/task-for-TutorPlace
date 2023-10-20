@@ -1,19 +1,22 @@
 .sitemap {
-  color: #212121;
+  color: #f1f1f1;
   padding-bottom: 50px;
   padding-top: 50px;
 }
 .sitemap h1 {
-  color: #2c39f2;
+  color: #f8f8f8;
   font-size: 22px;
   line-height: 30px;
 }
-.sitemap ol, .sitemap ul {
+
+.sitemap ol,
+.sitemap ul {
   counter-reset: page;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .sitemap ul {
   counter-reset: inner-page;
   overflow: hidden;
@@ -58,7 +61,7 @@
   margin: 0 5px 0 0;
 }
 .sitemap a {
-  color: inherit;
+  color: #ffffff;
   display: flex;
   font-size: 16px;
   line-height: 24px;
