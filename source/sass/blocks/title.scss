@@ -18,5 +18,6 @@
   &--h2 {
     @include adaptive-font(45, 23);
     font-weight: 600;
+    line-height: 1.05;
   }
 }
