@@ -14,26 +14,17 @@ mixin header(headerMods, currentUrl)
         text: "Страница 3"
       },
     ]
-  header.header-example(data-header='', class=headerMods)
-    .container
-      a.logo.header-example__logo(href='index.html', aria-label='Переход на главную страницу')
-        img.logo__first-part(src='path_to_first_part_image.png', width='91', height='21', alt='Логотип, часть 1')
-        img.logo__second-part(src='path_to_second_part_image.png', width='134', height='26', alt='Логотип, часть 2')
-      nav.header-example__nav
-        ul.header-example__list
-          li.header-example__item
-            a.header-example__link(href='components.html') Компоненты
-          li.header-example__item
-            a.header-example__link(href='cases.html') Кейсы
-          li.header-example__item
-            a.header-example__link(href='guides.html') Гайды
-          li.header-example__item
-            a.header-example__link.header-example__link--blue(href='https://ligaa.agency/', target='_blank') Лига А.
-      a.git-link.header-example__git-link(href='https://github.com/htmlonelove/liga-reshare', target='_blank', rel='nofollow noopener noreferrer', aria-label='Ссылка на репозиторий')
-        img(src='path_to_git_icon.png', width='35', height='35', alt='Иконка GitHub')
-      button.header-example__burger(type='button', aria-label='Переключатель отображения меню', aria-pressed='false', data-burger='')
-        span.header-example__burger-text Меню
-        img.header-example__burger-icon(src='path_to_burger_icon.png', width='20', height='20', alt='Иконка меню')
+  header.header(data-header='', class=headerMods)
+    .container.header__wrapper
+      +logo
+      nav.header__nav
+        ul.header__list
+          li.header__item
+            a.header__link(href='components.html') Главная
+          li.header__item
+            a.header__link(href='cases.html') Что даст обучение
+        +btn({text: "Личный кабинет", href: "#"}).btn-header
+      button.header__burger(type='button', aria-label='Переключатель отображения меню', aria-pressed='false', data-burger='')
   //- header.header(class=headerMods)
   //-   .container
   //-     if(currentUrl === "index.html")
