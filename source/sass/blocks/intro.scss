@@ -4,6 +4,10 @@
     position: relative;
     padding-top: 303px;
 
+    @include vp-1439 {
+      padding-top: 220px;
+    }
+
     @include vp-1023 {
       padding-top: 200px;
       display: flex;
