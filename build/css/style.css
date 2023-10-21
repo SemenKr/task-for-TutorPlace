@@ -2333,6 +2333,10 @@ button,
     padding: 0 25px;
   }
 
+  .intro__wrapper {
+    padding-top: 220px;
+  }
+
   .intro__image {
     -webkit-transform: translateX(0);
     transform: translateX(0);
