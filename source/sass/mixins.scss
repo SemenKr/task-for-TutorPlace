@@ -1,3 +1,53 @@
+@use "sass:math";
+
+// Адаптивное свойство
+$maxWidth: 1920; // Максимальная ширина всей страницы
+$maxWidthContainer: 1170; // Максимальная ширина контейнера
+
+// Миксин для настройки адаптивных свойств
+@mixin additiv-value($property, $startSize, $minSize, $type: 0) {
+  $addSize: $startSize - $minSize; // Вычисляем разницу между начальным и минимальным значением
+
+  @if $type == 1 {
+    // Только если меньше контейнера
+    #{$property}: $startSize + px; // Устанавливаем начальное значение
+
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} *
+        ((100vw - 320px) / #{$maxWidthContainer - 320})
+      ); // Изменяем значение на экранах с шириной меньше максимальной ширины контейнера
+    }
+  } @else if $type == 2 {
+    // Только если больше контейнера
+    #{$property}: $startSize + px; // Устанавливаем начальное значение
+
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(
+        #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+      ); // Изменяем значение на экранах с шириной больше максимальной ширины контейнера
+    }
+  } @else {
+    // Всегда
+    #{$property}: calc(
+      #{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
+    ); // Изменяем значение на всех экранах
+  }
+}
+
+
+// Функция для перевода в REM
+@function rem($px, $base-font-size: 16px) {
+  @if unitless($px) {
+    $px: $px * 1px;
+  }
+  @if unitless($base-font-size) {
+    $base-font-size: $base-font-size * 1px;
+  }
+  @return math.div($px, $base-font-size) * 1rem;
+}
+
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
